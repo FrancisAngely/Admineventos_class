@@ -5,7 +5,8 @@ $eventos = getAllVInner2("eventos", "localidades", "provincias", "id_localidades
 
 if (count($eventos) > 0) {
     foreach ($eventos as $e) {
-                 echo $u["role"];
+        echo $e["localidades"];
+        echo $e["provincias"];
              }}
 
 ?>
@@ -43,11 +44,12 @@ ob_start();
 <tr class="contenido"><td class="contenedor">
     <!-- ficha -->
     <table class="ficha" cellspacing=0 cellpadding=0>
+        
         <tr><th>Id:</th><td><?php echo $user["id"];?></td></tr>
-        <tr><th>Usuario:</th><td><?php echo $user["usuario"];?></td></tr>
-        <tr><th>E-mail:</th><td><?php echo $user["email"];?></td></tr>
-        <tr><th>Id Role:</th><td><?php echo $user["id_roles"];?></td></tr>
-        <tr><th>Role:</th><td><?php echo $u["role"];?></td></tr>
+        <tr><th>Evento:</th><td><?php echo $user["evento"];?></td></tr>
+        <tr><th>Fecha:</th><td><?php echo $user["fecha"];?></td></tr>
+        <tr><th>Localidad:</th><td><?php echo $eventos["id_localidades"];?></td></tr>
+        <tr><th>Provincia:</th><td><?php echo $eventos["id_provincias"];?></td></tr>
     </table>
     
     

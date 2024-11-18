@@ -49,7 +49,7 @@
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Role</th>
+                <th>Evento</th>
                 <th>Fecha</th>
                 <th>Localidad</th>
                 <th>Provincia</th>
@@ -75,7 +75,7 @@
                     <td><a href="modulo_eventos_edit.php?id=<?php echo $e["id1"]; ?>"><i class="fa-solid fa-pen-to-square fa-2x"></i></a>
                       &nbsp;&nbsp;
                       <a href="#" data-id="<?php echo $e["id1"]; ?>" class="borrar"><i class="fa-solid fa-trash text-danger"></i></a>
-                      <a href="modulo_eventos_print.php?id=<?php echo $u["id1"]; ?>"><i class="fa-solid fa-print"></i></a>
+                      <a href="modulo_eventos_print.php?id=<?php echo $e["id1"]; ?>"><i class="fa-solid fa-print"></i></a>
 
                     </td>
                   </tr>
@@ -92,18 +92,6 @@
               ?>
                 </tbody>
           </table>
-          <?php
-          $excel .= ' </tbody>
-          <tfooter>
-          <tr>
-                 <th>Id</th>
-                <th>Role</th>
-                <th>Fecha</th>
-                <th>Localidad</th>
-                <th>Provincia</th>
-          </tfooter>
-          </table>';
-          ?>
 
         </div> <!-- container -->
 
@@ -127,6 +115,7 @@
       $("#exportar").click(function() {
         $("#formExportar").submit();
       });
+      
       $(".borrar").click(function() {
         let id = $(this).attr('data-id');
         let padre = $(this).parent().parent();
